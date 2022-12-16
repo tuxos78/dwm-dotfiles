@@ -3,6 +3,11 @@ if [[ ! `pidof xfce-polkit` ]]; then
     /usr/lib/xfce-polkit/xfce-polkit &
 fi
 
+#while :
+#do
+#	xsetroot -name "$(date +"%R / %a %d %b") / $(hostname)"; sleep 60
+#done &
+
 #autostart
 brightnessctl s 15% &
 picom &
