@@ -1,3 +1,4 @@
+![screen2](https://user-images.githubusercontent.com/62457015/208231100-a8103398-6024-4298-aaf8-753a5ecf20ad.png)
 ![dwm](https://user-images.githubusercontent.com/62457015/206675608-7e57daa5-6399-48b5-a10f-08cc8bb671d6.png)
 # dwm-dotfiles
 Configuration files are taken from here https://github.com/LukeSmithxyz/dwm end https://github.com/LukeSmithxyz/st
