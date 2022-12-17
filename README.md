@@ -10,6 +10,6 @@ yay -S min
 git clone https://github.com/tuxos78/dwm-dotfiles.git
 
 Copy dwm, fehbg, .xinitrc .bashrc to home/user/
-Copy picom, ranger, dunst neovim to home/user/.config
+Copy picom, ranger, dunst neovim gtk-3.0 to home/user/.config
 
 
