@@ -4,12 +4,23 @@ Configuration files are taken from here https://github.com/LukeSmithxyz/dwm end 
 Set up hotkeys for yourself.
 Laptop configuration.
 
-install: sudo pacman -S xorg xorg-xinit git mc nano neovim terminus-font ttf-font-awesome ttf-nerd-fonts-symbols-1000-em feh pulseaudio pamixer dmenu dunst picom geany thunar brightnessctl
+install soft
+: sudo pacman -S xorg xorg-xinit git mc nano neovim terminus-font ttf-font-awesome ttf-nerd-fonts-symbols-1000-em feh pulseaudio pamixer dmenu dunst picom geany thunar brightnessctl
+
+install browser:
 yay -S min 
 
 git clone https://github.com/tuxos78/dwm-dotfiles.git
 
-Copy dwm, fehbg, .xinitrc .bashrc to home/user/
+Copy dwm, st, fehbg, .xinitrc .bashrc to home/user/  
+
+install dwm:
+cd dwm 
+sudo make clean install
+install terminal:
+cd st
+sudo make clean install
+
 Copy picom, ranger, dunst neovim gtk-3.0 to home/user/.config
 
 
