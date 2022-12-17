@@ -12,7 +12,7 @@ yay -S min
 
 git clone https://github.com/tuxos78/dwm-dotfiles.git
 
-Copy dwm, st, fehbg, .xinitrc .bashrc to home/user/  
+Copy dwm, st, fehbg, .xinitrc .bashrc wallpapers to home/user/  
 
 install dwm:
 cd dwm 
