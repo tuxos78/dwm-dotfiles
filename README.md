@@ -1,10 +1,13 @@
 ![screen2](https://user-images.githubusercontent.com/62457015/208231100-a8103398-6024-4298-aaf8-753a5ecf20ad.png)
 ![dwm](https://user-images.githubusercontent.com/62457015/206675608-7e57daa5-6399-48b5-a10f-08cc8bb671d6.png)
 # dwm-dotfiles
-Configuration files are taken from here https://github.com/LukeSmithxyz/dwm end https://github.com/LukeSmithxyz/st
-Set up hotkeys for yourself.
-Laptop configuration.
+dwm version 6.4
+minimum patches:
+Vanity gaps, tag preview bar, alpha bar, nobolder
+used flexipatch and flexi-finalizer
+st terminal https://github.com/LukeSmithxyz/st
 
+Laptop configuration.
 install soft
 : sudo pacman -S xorg xorg-xinit git mc nano neovim terminus-font ttf-font-awesome ttf-nerd-fonts-symbols-1000-em feh pulseaudio pamixer dmenu dunst picom geany thunar brightnessctl ranger ueberzug
 
