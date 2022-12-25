@@ -1,5 +1,7 @@
 ![screen2](https://user-images.githubusercontent.com/62457015/208231100-a8103398-6024-4298-aaf8-753a5ecf20ad.png)
 
+![dwm](https://user-images.githubusercontent.com/62457015/209472905-ac0bb2c1-a906-4ffb-bd02-274144bbf94f.png)
+
 # dwm-dotfiles
 dwm version 6.4
 minimum patches:
@@ -27,5 +29,6 @@ cd st
 sudo make clean install
 
 Copy picom, ranger, dunst neovim gtk-3.0 to home/user/.config
+
 
 
