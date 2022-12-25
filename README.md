@@ -10,6 +10,7 @@ install soft
 
 install browser:
 yay -S min 
+yay -S xfce-polkit
 
 git clone https://github.com/tuxos78/dwm-dotfiles.git
 
