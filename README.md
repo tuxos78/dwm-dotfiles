@@ -5,7 +5,7 @@
 # dwm-dotfiles
 dwm version 6.4
 minimum patches:
-Vanity gaps, tag preview bar, alpha bar, nobolder,
+Vanity gaps, tag preview bar, alpha bar, noborder,
 used flexipatch and flexi-finalizer,
 st terminal https://github.com/LukeSmithxyz/st
 
