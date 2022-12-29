@@ -35,9 +35,9 @@ cd /etc/systemd/system/getty@tty1.service.d
 sudo nano override.conf
 
 
-[Service]
-Type=simple
-ExecStart=
+[Service]                                                               
+Type=simple                                                              
+ExecStart=                                                                  
 ExecStart=-/sbin/agetty --autologin yourusername --noclear %I 38400 linux
 
 
