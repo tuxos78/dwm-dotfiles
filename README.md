@@ -39,11 +39,12 @@ ExecStart=
 ExecStart=-/sbin/agetty --autologin yourusername --noclear %I 38400 linux
 
 nano .bash_profile                                                        
-#Startx Automatically
-if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-. startx
-logout
+#Startx Automatically                                                   
+if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then                    
+. startx                                                                   
+logout                                                                    
 fi
+
 
 
 
