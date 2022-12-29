@@ -29,7 +29,7 @@ sudo make clean install
 
 Copy picom, ranger, dunst neovim gtk-3.0 to home/user/.config
 
-Autologin dwm:
+Autologin dwm:                                                            
 sudo mkdir /etc/systemd/system/getty@tty1.service.d               
 cd /etc/systemd/system/getty@tty1.service.d                            
 sudo nano override.conf
