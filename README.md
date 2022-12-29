@@ -5,20 +5,20 @@
 # dwm-dotfiles
 dwm version 6.4
 minimum patches:
-Vanity gaps, tag preview bar, alpha bar, noborder,
+Vanity gaps, tag preview bar, alpha bar, noborder, awesomebar, systray, bar_winicon.
 used flexipatch and flexi-finalizer,
-st terminal https://github.com/LukeSmithxyz/st
+st terminal https://github.com/LukeSmithxyz/st                       
 
-Laptop configuration.
-install soft
-: sudo pacman -S xorg xorg-xinit git mc nano neovim terminus-font ttf-font-awesome ttf-nerd-fonts-symbols-1000-em feh pulseaudio pamixer dmenu dunst picom geany thunar brightnessctl ranger ueberzug
+Laptop configuration.                                          
+install soft:                                                    
+sudo pacman -S xorg xorg-xinit git mc nano neovim terminus-font ttf-font-awesome ttf-nerd-fonts-symbols-1000-em feh pulseaudio pamixer dmenu dunst picom geany thunar brightnessctl ranger ueberzug imlib2
 
-install browser, polkit:
+install browser, polkit:                                     
 yay -S min xfce-polkit
 
-git clone https://github.com/tuxos78/dwm-dotfiles.git
+git clone https://github.com/tuxos78/dwm-dotfiles.git                        
 
-Copy dwm, st, fehbg, .xinitrc .bashrc wallpapers to home/user/  
+Copy dwm, st, fehbg, .xinitrc .bashrc wallpapers to home/user/       
 
 install dwm:
 cd dwm 
