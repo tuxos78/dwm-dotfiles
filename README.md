@@ -33,12 +33,17 @@ Autologin dwm:
 sudo mkdir /etc/systemd/system/getty@tty1.service.d               
 cd /etc/systemd/system/getty@tty1.service.d                            
 sudo nano override.conf
-
-
 [Service]                                                               
 Type=simple                                                              
 ExecStart=                                                                  
 ExecStart=-/sbin/agetty --autologin yourusername --noclear %I 38400 linux
+
+nano .bash_profile                                                        
+#Startx Automatically
+if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+. startx
+logout
+fi
 
 
 
