@@ -11,7 +11,7 @@ st terminal https://github.com/LukeSmithxyz/st
 
 Laptop configuration.                                          
 install soft:                                                    
-sudo pacman -S xorg xorg-xinit git mc nano neovim terminus-font ttf-font-awesome ttf-nerd-fonts-symbols-1000-em feh pulseaudio pamixer dmenu dunst picom geany thunar brightnessctl ranger ueberzug imlib2
+sudo pacman -S xorg xorg-xinit git mc nano neovim terminus-font ttf-font-awesome ttf-nerd-fonts-symbols-1000-em feh pulseaudio pamixer dmenu dunst picom geany thunar brightnessctl ranger ueberzug imlib2 xdg-user-dirs
 
 install browser, polkit:                                     
 yay -S min xfce-polkit
