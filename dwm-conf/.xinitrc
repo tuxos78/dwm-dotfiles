@@ -13,7 +13,6 @@ brightnessctl s 15% &
 picom &
 dunst &
 #twmnd &
-dwmblocks &
 # sets wallpaper using feh
 sh ~/.fehbg &
 
