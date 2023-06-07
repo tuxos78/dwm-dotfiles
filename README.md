@@ -1,3 +1,4 @@
+![2023-06-07-124732_1920x1080_scrot](https://github.com/tuxos78/dwm-dotfiles/assets/62457015/dd042317-5d26-44c8-9937-e61a1e4450da)
 ![2023-06-07-123749_1920x1080_scrot](https://github.com/tuxos78/dwm-dotfiles/assets/62457015/3b2d38a3-a0a7-4bd3-8a9f-d6931f183838)
 
 # dwm-dotfiles
