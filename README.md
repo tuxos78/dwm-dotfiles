@@ -1,5 +1,4 @@
-![screen2](https://user-images.githubusercontent.com/62457015/208231100-a8103398-6024-4298-aaf8-753a5ecf20ad.png)
-
+![2023-06-07-123749_1920x1080_scrot](https://github.com/tuxos78/dwm-dotfiles/assets/62457015/3b2d38a3-a0a7-4bd3-8a9f-d6931f183838)
 ![dwm](https://user-images.githubusercontent.com/62457015/209472905-ac0bb2c1-a906-4ffb-bd02-274144bbf94f.png)
 
 # dwm-dotfiles
