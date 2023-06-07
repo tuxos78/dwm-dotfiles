@@ -3,8 +3,7 @@
 # dwm-dotfiles
 dwm version 6.4
 minimum patches:
-Fullgaps, tag preview bar.
-used dwm-6.4                       
+Fullgaps, tag preview bar.                    
 
 Laptop configuration.                                          
 install soft:                                                    
