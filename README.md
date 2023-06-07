@@ -5,9 +5,8 @@
 # dwm-dotfiles
 dwm version 6.4
 minimum patches:
-Vanity gaps, tag preview bar, alpha bar, noborder, awesomebar, systray, bar_winicon.
-used flexipatch and flexi-finalizer.                                                
-st terminal https://github.com/LukeSmithxyz/st                       
+Fullgaps, tag preview bar.
+used dwm-6.4                       
 
 Laptop configuration.                                          
 install soft:                                                    
