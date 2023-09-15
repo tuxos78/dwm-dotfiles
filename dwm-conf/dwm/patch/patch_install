@@ -1,3 +1,0 @@
-patch -p1 ,patch/name_patch.diff
-
-sudo pacman -S Imlib2    # tag-preview patch
