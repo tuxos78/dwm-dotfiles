@@ -1,0 +1,14 @@
+--- dwm.c
++++ dwm.c
+@@ -446,6 +454,11 @@ buttonpress(XEvent *e)
+ 		if (i < LENGTH(tags)) {
+ 			click = ClkTagBar;
+ 			arg.ui = 1 << i;
++			/* hide preview if we click the bar */
++			if (selmon->previewshow) {
++				selmon->previewshow = 0;
++				XUnmapWindow(dpy, selmon->tagwin);
++			}
+ 		} else if (ev->x < x + blw)
+ 			click = ClkLtSymbol;
+ 		else if (ev->x > selmon->ww - (int)TEXTW(stext))
