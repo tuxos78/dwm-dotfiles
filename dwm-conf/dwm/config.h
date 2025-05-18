@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int scalepreview       = 4;        /* preview scaling (display w and h / scalepreview) */
@@ -36,11 +36,11 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       0,            0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -67,11 +67,14 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *poweroffcmd[]    = { "st", "-e", "poweroff", NULL };
+static const char *rebootcmd[]      = { "st", "-e", "reboot", NULL };
+static const char *updatecmd[]      = { "st", "-e", "pacman", "-Syu", NULL };
 
 /* Constants */
-#define BROWSER "min"
-#define EDITOR  "nano"
 #include <X11/XF86keysym.h>
+#define BROWSER "firefox"
+#define EDITOR  "nano"
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -111,25 +114,24 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY,			            XK_w,		    spawn,		{.v = (const char*[]){ BROWSER, NULL } } },
+    { MODKEY|ShiftMask,             XK_r,           spawn,      {.v = rebootcmd } },
+    { MODKEY|ShiftMask,             XK_p,           spawn,      {.v = poweroffcmd } },
+    { MODKEY|ShiftMask,             XK_u,           spawn,      {.v = updatecmd } },
+    { MODKEY,			            XK_w,		    spawn,		{.v = (const char*[]){ BROWSER, NULL } } },
 	{ MODKEY,			            XK_g,		    spawn,		{.v = (const char*[]){ "geany", NULL } } },
-	{ MODKEY,		               	XK_r,		    spawn,		{.v = (const char*[]){ "st", "ranger", NULL } } },
-	{ MODKEY|ShiftMask,		        XK_r,		    spawn,		{.v = (const char*[]){ "reboot", NULL } } },
-	{ MODKEY|ShiftMask,		        XK_p,			spawn,	    {.v = (const char*[]){ "poweroff", NULL } }  },
-	{ 0, XF86XK_AudioMute,		    spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 3; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 3; kill -44 $(pidof dwmblocks)") },
-	
 	{ 0, XF86XK_MonBrightnessUp,	spawn,		{.v = (const char*[]){ "brightnessctl", "set", "15%+", NULL } } },
 	{ 0, XF86XK_MonBrightnessDown,	spawn,		{.v = (const char*[]){ "brightnessctl", "set", "15%-", NULL } } },
+    { 0, XF86XK_AudioMute,		    spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 3; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 3; kill -44 $(pidof dwmblocks)") },
 };
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
+	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
